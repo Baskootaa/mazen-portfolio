@@ -1,0 +1,57 @@
+/* ─────────────────────────────────────────────
+   PROJECT REACTIONS  (live, backed by Redis)
+   ───────────────────────────────────────────── */
+.project-reactions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;   /* pin to the bottom of the card, aligned across all cards */
+  padding-top: 18px;  /* breathing room above (no divider line) */
+}
+
+.preact {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  line-height: 1;
+  color: var(--text-2);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-h);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+.preact svg { width: 14px; height: 14px; }
+.preact:hover {
+  color: var(--p-light);
+  border-color: var(--p-h);
+  background: var(--p-glow);
+  box-shadow: 0 4px 14px var(--p-glow);
+}
+.preact:disabled { cursor: default; opacity: 0.7; }
+.preact-count { min-width: 8px; text-align: left; }
+
+/* Active — this browser has reacted (icon fills in) */
+.preact-on {
+  color: var(--p-light);
+  border-color: var(--p);
+  background: var(--p-glow);
+  box-shadow: 0 4px 16px var(--p-glow);
+}
+.preact-on svg { fill: currentColor; }
+
+/* Little pop when clicked */
+.preact-pop { animation: preactPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@keyframes preactPop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preact-pop { animation: none; }
+}

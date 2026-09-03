@@ -1,0 +1,140 @@
+/* ─────────────────────────────────────────────
+   ABOUT
+   ───────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-info-grid {
+    justify-content: center;
+  }
+}
+
+.about-text {
+  max-width: 800px;
+}
+
+.about-para {
+  color: var(--text-2);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-para strong { color: var(--text); }
+
+.about-statement {
+  border-left: 3px solid var(--p);
+  background: rgba(255,255,255,0.05);
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: 24px 0;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-statement strong { color: var(--p-light); }
+
+.about-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 32px 0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-2);
+  font-size: 14px;
+}
+
+.info-item svg { color: var(--p-light); flex-shrink: 0; }
+
+a.info-item,
+a.info-item:link,
+a.info-item:visited,
+a.info-item:hover,
+a.info-item:active {
+  color: var(--text-2);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img-wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(99, 102, 241, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-img-wrapper:hover {
+  transform: scale(1.03);
+  border-color: rgba(99, 102, 241, 0.8);
+}
+
+.about-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-langs { display: flex; flex-direction: column; gap: 12px; }
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  min-width: 60px;
+}
+
+.lang-bar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.lang-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--p), var(--p-light));
+  border-radius: 3px;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lang-level {
+  font-size: 12px;
+  color: var(--muted);
+  min-width: 80px;
+  text-align: right;
+}

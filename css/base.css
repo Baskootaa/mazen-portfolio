@@ -1,0 +1,369 @@
+/* ─────────────────────────────────────────────
+   OSAMA AHMED PORTFOLIO — style.css
+   ───────────────────────────────────────────── */
+
+/* ── RESET & ROOT ── */
+*, *::before, *::after {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── CUSTOM THEME-BOUND TEXT SELECTION ── */
+::selection {
+  background: var(--selection-bg, rgba(229, 193, 88, 0.32)) !important;
+  color: var(--selection-color, #ffffff) !important;
+  text-shadow: 0 0 10px var(--selection-glow, rgba(229, 193, 88, 0.4));
+}
+
+::-moz-selection {
+  background: var(--selection-bg, rgba(229, 193, 88, 0.32)) !important;
+  color: var(--selection-color, #ffffff) !important;
+  text-shadow: 0 0 10px var(--selection-glow, rgba(229, 193, 88, 0.4));
+}
+
+:root,
+[data-theme="monochrome"] {
+  /* Monochrome Slate & Arctic Frost (Crisp, Elegant, Minimal) */
+  --bg:          #050505;
+  --bg-2:        #0a0a0d;
+  --surface:     #101014;
+  --card:        #141419;
+  --card-h:      #1a1a20;
+  --border:      rgba(255, 255, 255, 0.07);
+  --border-h:    rgba(255, 255, 255, 0.25);
+
+  --p:           #ffffff;
+  --p-h:         #e2e8f0;
+  --p-light:     #cbd5e1;
+  --p-glow:      rgba(255, 255, 255, 0.08);
+  --mouse-glow-color: rgba(255, 255, 255, 0.035);
+
+  --selection-bg:    rgba(229, 193, 88, 0.32);
+  --selection-color: #ffffff;
+  --selection-glow:  rgba(229, 193, 88, 0.4);
+
+  --accent:      #94a3b8;
+  --accent-glow: rgba(148, 163, 184, 0.08);
+
+  --text:        #f8fafc;
+  --text-2:      #cbd5e1;
+  --text-3:      #64748b;
+  --muted:       #71717a;
+
+  --particle-rgb: 255, 255, 255;
+  --particle-node-rgb: 226, 232, 240;
+  --btn-p-bg:    #ffffff;
+  --btn-p-text:  #050505;
+  --name-last-gradient: linear-gradient(135deg, #ffffff 0%, #cbd5e1 60%, #94a3b8 100%);
+  --timeline-gradient: linear-gradient(to bottom, #ffffff, #e2e8f0, #cbd5e1, #94a3b8, #71717a 80%, transparent);
+  --node-2023: #94a3b8;
+  --node-2024: #cbd5e1;
+  --node-2025: #e2e8f0;
+  --node-2026: #ffffff;
+
+  --font-heading: 'Urbanist', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body:    'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --green:       #10b981;
+  --orange:      #f59e0b;
+  --red:         #ef4444;
+
+  --r:           14px;
+  --r-sm:        8px;
+  --transition:  0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="gold"] {
+  /* Softer Champagne Gold & Warm Bronze (Refined, Premium, Non-Harsh) */
+  --bg:          #070709;
+  --bg-2:        #0b0b0e;
+  --surface:     #111116;
+  --card:        #15151b;
+  --card-h:      #1a1a22;
+  --border:      rgba(229, 193, 88, 0.08);
+  --border-h:    rgba(229, 193, 88, 0.28);
+
+  --p:           #e5c158;
+  --p-h:         #d4af37;
+  --p-light:     #f3e5ab;
+  --p-glow:      rgba(229, 193, 88, 0.10);
+  --mouse-glow-color: rgba(229, 193, 88, 0.04);
+
+  --selection-bg:    rgba(229, 193, 88, 0.35);
+  --selection-color: #ffffff;
+  --selection-glow:  rgba(229, 193, 88, 0.45);
+
+  --accent:      #c5a059;
+  --accent-glow: rgba(197, 160, 89, 0.08);
+
+  --text:        #f5f0e1;
+  --text-2:      #c4b9a7;
+  --text-3:      #786d5e;
+  --muted:       #786f62;
+
+  --particle-rgb: 229, 193, 88;
+  --particle-node-rgb: 243, 229, 171;
+  --btn-p-bg:    linear-gradient(135deg, #e5c158, #c5a059);
+  --btn-p-text:  #070709;
+  --name-last-gradient: linear-gradient(135deg, #f3e5ab 0%, #e5c158 55%, #c5a059 100%);
+  --timeline-gradient: linear-gradient(to bottom, #f3e5ab 0%, #e5c158 35%, #d4af37 70%, #c5a059 100%);
+  --node-2023: #f3e5ab;
+  --node-2024: #e5c158;
+  --node-2025: #d4af37;
+  --node-2026: #c5a059;
+}
+
+[data-theme="platinum-gold"] {
+  /* Platinum & Gold Fusion (Subtle Luxury Silver-Gold Hybrid) */
+  --bg:          #050507;
+  --bg-2:        #09090d;
+  --surface:     #0f0f15;
+  --card:        #14141c;
+  --card-h:      #191924;
+  --border:      rgba(229, 193, 88, 0.09);
+  --border-h:    rgba(229, 193, 88, 0.32);
+
+  --p:           #e5c158;
+  --p-h:         #d4af37;
+  --p-light:     #f3e5ab;
+  --p-glow:      rgba(229, 193, 88, 0.10);
+  --mouse-glow-color: rgba(243, 229, 171, 0.045);
+
+  --selection-bg:    rgba(229, 193, 88, 0.35);
+  --selection-color: #ffffff;
+  --selection-glow:  rgba(229, 193, 88, 0.45);
+
+  --accent:      #cbd5e1;
+  --accent-glow: rgba(203, 213, 225, 0.09);
+
+  --text:        #f8fafc;
+  --text-2:      #cbd5e1;
+  --text-3:      #78716c;
+  --muted:       #78716c;
+
+  --particle-rgb: 229, 193, 88;
+  --particle-node-rgb: 203, 213, 225;
+  --btn-p-bg:    linear-gradient(135deg, #ffffff 0%, #e5c158 55%, #c5a059 100%);
+  --btn-p-text:  #050507;
+  --name-last-gradient: linear-gradient(135deg, #ffffff 0%, #cbd5e1 35%, #e5c158 70%, #c5a059 100%);
+  --timeline-gradient: linear-gradient(to bottom, #ffffff 0%, #f3e5ab 30%, #e5c158 60%, #c5a059 90%, transparent);
+  --node-2023: #ffffff;
+  --node-2024: #f3e5ab;
+  --node-2025: #e5c158;
+  --node-2026: #c5a059;
+}
+
+[data-theme="emerald"] {
+  /* Soft Emerald & Cool Mint */
+  --bg:          #060d0b;
+  --bg-2:        #091411;
+  --surface:     #0e1f1a;
+  --card:        #122620;
+  --card-h:      #173029;
+  --border:      rgba(16, 185, 129, 0.08);
+  --border-h:    rgba(16, 185, 129, 0.28);
+
+  --p:           #10b981;
+  --p-h:         #059669;
+  --p-light:     #34d399;
+  --p-glow:      rgba(16, 185, 129, 0.09);
+  --mouse-glow-color: rgba(16, 185, 129, 0.04);
+
+  --selection-bg:    rgba(16, 185, 129, 0.35);
+  --selection-color: #ffffff;
+  --selection-glow:  rgba(16, 185, 129, 0.45);
+
+  --accent:      #00e676;
+  --accent-glow: rgba(0, 230, 118, 0.08);
+
+  --text:        #e6f4f1;
+  --text-2:      #9ee0d0;
+  --text-3:      #4d8b7c;
+  --muted:       #649e90;
+
+  --particle-rgb: 16, 185, 129;
+  --particle-node-rgb: 52, 211, 153;
+  --btn-p-bg:    linear-gradient(135deg, #10b981, #047857);
+  --btn-p-text:  #060d0b;
+  --name-last-gradient: linear-gradient(135deg, #34d399 0%, #10b981 55%, #00e676 100%);
+  --timeline-gradient: linear-gradient(to bottom, #34d399 0%, #10b981 35%, #059669 70%, #047857 100%);
+  --node-2023: #34d399;
+  --node-2024: #10b981;
+  --node-2025: #059669;
+  --node-2026: #047857;
+}
+
+[data-font-suite="modern-tech"] {
+  --font-heading: 'Outfit', 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Sora', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:    'Fira Code', 'JetBrains Mono', monospace;
+}
+
+[data-font-suite="cyber-matrix"] {
+  --font-heading: 'Chakra Petch', 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Rajdhani', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+[data-font-suite="luxury-editorial"] {
+  --font-heading: 'Cinzel', 'Space Grotesk', serif;
+  --font-body:    'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+  --heading-letter-spacing: 0.02em;
+}
+
+[data-font-suite="futuristic-urbanist"] {
+  --font-heading: 'Urbanist', 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+[data-font-suite="arabic-luxury"] {
+  --font-heading: 'Alexandria', 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'IBM Plex Sans Arabic', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+[data-font-suite="retro-arcade"] {
+  --font-heading: 'Pixelify Sans', 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Space Mono', 'Plus Jakarta Sans', monospace, sans-serif;
+  --font-mono:    'Space Mono', monospace;
+}
+
+[data-font-suite="minimal-serif"] {
+  --font-heading: 'Cormorant Garamond', 'Space Grotesk', serif;
+  --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+  --heading-letter-spacing: 0.01em;
+}
+
+[data-font-suite="dev-code-core"] {
+  --font-heading: 'Fira Code', 'Space Grotesk', monospace;
+  --font-body:    'Source Code Pro', 'Plus Jakarta Sans', monospace, sans-serif;
+  --font-mono:    'Fira Code', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+button, input, select, textarea, optgroup {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6,
+.section-title, .hero-title, .nav-logo {
+  font-family: var(--font-heading);
+}
+
+.btn, .btn-primary, .btn-secondary, .hero-link, .nav-link, .badge {
+  font-family: var(--font-body);
+}
+
+code, pre, kbd, samp, .mono, .font-mono {
+  font-family: var(--font-mono);
+}
+
+html.pos-os-active,
+body.pos-os-active {
+  overflow: hidden !important;
+  scrollbar-width: none;
+}
+
+html.pos-os-active::-webkit-scrollbar,
+body.pos-os-active::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ── CREATIVE OUT-OF-THE-BOX LIQUID LASER SCROLLBAR ── */
+:root {
+  --scrollbar-thumb-bg: linear-gradient(180deg, var(--p-glow) 0%, var(--p-light) 50%, var(--p-glow) 100%);
+  --scrollbar-thumb-shadow: 0 0 12px var(--p-glow);
+}
+
+html {
+  scrollbar-color: var(--p-h) transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: 999px;
+  box-shadow: var(--scrollbar-thumb-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-bg);
+  box-shadow: 0 0 22px var(--p-glow), 0 0 35px var(--p-glow);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--p);
+  box-shadow: 0 0 25px var(--p-glow);
+}
+
+/* ── CANVAS ── */
+#particles {
+  position: fixed; inset: 0;
+  z-index: 0; pointer-events: none;
+  opacity: 0.6;
+}
+
+/* ── MOUSE GLOW ── */
+.mouse-glow {
+  position: fixed; inset: 0;
+  z-index: 1; pointer-events: none;
+  background: radial-gradient(
+    650px circle at var(--mx, 50%) var(--my, 50%),
+    var(--mouse-glow-color, rgba(255, 255, 255, 0.04)), transparent 40%
+  );
+  transition: background 0.2s ease;
+}
+
+/* ── SELECTION ── */
+::selection { background: #ffffff; color: #000; }
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
