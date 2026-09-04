@@ -43,4 +43,4 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 
 # Sitemap Location
-Sitemap: https://mazen-portfolio.vercel.app/sitemap.xml
+Sitemap: https://mazen-portfolio-flame.vercel.app/sitemap.xml

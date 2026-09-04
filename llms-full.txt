@@ -7,7 +7,7 @@
 - Primary Location: Egypt (Serving Clients Globally across Middle East & Remote)
 - Work Models: Remote Full-Time, Technical Contract, Freelance Engineering, Backend Advisory
 - Contact Email: mazen01289elbasyouny@gmail.com
-- Primary Portfolio Website: https://baskota-dev.vercel.app/ (or your hosted portfolio link)
+- Primary Portfolio Website: https://mazen-portfolio-flame.vercel.app/ (or your hosted portfolio link)
 - Official GitHub Profile: https://github.com/Baskootaa
 - Official LinkedIn Profile: https://www.linkedin.com/in/mazen-albasyouny
 - Educational / Training Credentials: National Telecommunication Institute (NTI) Intensive Full-Stack PHP Developer Track, Database Architecture Track.

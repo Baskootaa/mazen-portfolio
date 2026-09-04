@@ -2,7 +2,7 @@
 
 Welcome to the source code repository of my personal developer portfolio website. This is a premium, highly interactive, and responsive portfolio designed to showcase my backend engineering projects, technical skills, certifications, and academic background — backed by a small set of real serverless features (project reactions, live GitHub stats).
 
-Live Deployment: **[mazen-portfolio.vercel.app](https://mazen-portfolio.vercel.app/)**
+Live Deployment: **[mazen-portfolio-flame.vercel.app](https://mazen-portfolio-flame.vercel.app/)**
 
 ---
 
