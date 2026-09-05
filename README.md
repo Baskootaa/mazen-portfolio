@@ -45,7 +45,7 @@ Live Deployment: **[mazen-portfolio-flame.vercel.app](https://mazen-portfolio-fl
 ├── api/ # Vercel serverless functions (reactions, GitHub stats)
 ├── icons/ # Local SVG/PNG assets (platforms, icons, personal photo, etc.)
 ├── audio/ # Ambient sound effects
-├── Mazen_Albasyouny_CV_Readable.pdf # Downloadable PDF resume.
+├── Mazen Elbasyouny - CV.pdf # Downloadable PDF resume.
 ├── favicon.svg / og-image.png
 ├── robots.txt / sitemap.xml
 └── vercel.json # Vercel deployment configuration (routing, security headers).

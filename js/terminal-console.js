@@ -319,9 +319,9 @@
         const cvLine = printLine('', 'loading');
         await typeText(cvLine, 'Opening Resume...', 20);
         const cvProgress = printLine('');
-        await simulateProgressBar(cvProgress, 'Mazen_Albasyouny_CV_Readable.pdf', 80, 10);
+        await simulateProgressBar(cvProgress, 'Mazen Elbasyouny - CV.pdf', 80, 10);
         printLine('Done ✔', 'success');
-        window.open('Mazen_Albasyouny_CV_Readable.pdf', '_blank');
+        window.open('Mazen Elbasyouny - CV.pdf', '_blank');
         break;
 
       case 'coffee':

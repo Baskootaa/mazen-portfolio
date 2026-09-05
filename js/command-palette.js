@@ -63,7 +63,7 @@
     { group: 'Actions', icon: svgTerminal, label: 'Open Terminal Console', keywords: 'terminal console dev tools', action: () => clickEl('terminalToggle'), hint: 'toggles' },
     { group: 'Actions', icon: svgSkull, label: 'Toggle Hacker Mode', keywords: 'hacker matrix theme green', action: () => clickEl('matrixToggle'), hint: 'toggles' },
     { group: 'Actions', icon: svgMonitor, label: 'Launch Portfolio OS', keywords: 'os desktop launch boot', action: () => clickEl('launchOsBtn') },
-    { group: 'Actions', icon: svgDownload, label: 'Download CV', keywords: 'resume cv pdf download', action: () => window.open('Mazen_Albasyouny_CV_Readable.pdf', '_blank') },
+    { group: 'Actions', icon: svgDownload, label: 'Download CV', keywords: 'resume cv pdf download', action: () => window.open('Mazen Elbasyouny - CV.pdf', '_blank') },
     { group: 'Actions', icon: svgClip, label: 'Copy Email Address', keywords: 'email copy contact mail', action: () => {
         navigator.clipboard.writeText('mazen01289elbasyouny@gmail.com').then(() => showCmdkToast('Email copied to clipboard!'));
       } },

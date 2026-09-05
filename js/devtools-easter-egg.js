@@ -92,7 +92,7 @@
         <div class="dte-actions" id="dteActions" hidden>
           <a class="dte-btn" href="https://github.com/Baskootaa" target="_blank" rel="noopener">GitHub</a>
           <a class="dte-btn" href="https://www.linkedin.com/in/mazen-albasyouny" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="dte-btn" href="Mazen_Albasyouny_CV_Readable.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="dte-btn" href="Mazen Elbasyouny - CV.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>`;
     document.body.appendChild(overlay);

@@ -49,7 +49,7 @@
   - Advanced PDO Queries: Complex SQL table joins (`INNER JOIN`) linking members to their respective subscriptions and packages.
   - Administrative Dashboard: Full management control over member registrations, status updates, and renewals.
 - Tech Stack: Custom PHP, PDO, MySQL, SQL Automation, Render, HTML5/CSS3.
-- Live Web Link: https://gym-master-q1eu.onrender.com/
+- Live Web Link: https://gym-master.great-site.net/
 - Source Code Repository: https://github.com/Baskootaa
 
 ### 3. Personal Developer Workshop & Code Lab (ورشة مأزن البرمجية)
